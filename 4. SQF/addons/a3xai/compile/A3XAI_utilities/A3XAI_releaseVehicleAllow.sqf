@@ -9,6 +9,7 @@ if ((toLower _vehicleClass) isEqualTo "autonomous") exitWith {};
 	
 _object removeAllEventHandlers "GetIn";
 if (isDedicated) then {
+	_object call A3XAI_generateVehicleLoot;
 	_object addEventHandler ["GetIn",{
 		if (isPlayer (_this select 2)) then {
 			(_this select 0) call A3XAI_releaseVehicleNow;

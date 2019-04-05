@@ -1,0 +1,11 @@
+A3XAI 0.2.2
+
+Files changed:
+A3XAI.pbo update required: Yes
+A3XAI_config.pbo update required: Yes
+Headless Client Files/Keys update required: Removed
+A3XAI Client Addon update required: No
+
+[Changed] AI Reinforcement to allow for paratroopers
+[Added] Randomised configurable vehicle loot
+[Fixed] Fixed vehicle type detection (Air, Land) for kill types (was updated prior to now but I forget to update it here
