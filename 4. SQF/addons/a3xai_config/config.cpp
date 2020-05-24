@@ -424,7 +424,14 @@ class CfgA3XAISettings {
 	
 	//AI types permitted to summon reinforcements. Default: airReinforcementAllowedFor[] = {"static","dynamic","random"};
 	//Usable AI types: "static", "dynamic", "random", "air", "land", "staticcustom", "aircustom", "landcustom", "vehiclecrew"
-	airReinforcementAllowedFor[] = {"static","dynamic","random"};
+	airReinforcementAllowedFor[] = {"static","dynamic","random","vehiclecrew","land","air"};
+	
+	//Probability to deploy infantry AI. If chance roll fails, air vehicle will remain in area for duration defined by airReinforcementDuration0-3 and engage detected players
+	//Unarmed air vehicle will always have a 1.00 probability to deploy at least 1 infantry AI unit.
+	airReinforceDeployChance0 = 0.60;
+	airReinforceDeployChance1 = 0.70;
+	airReinforceDeployChance2 = 0.80;
+	airReinforceDeployChance3 = 0.90;
 	
 	//Maximum time for reinforcement for armed air vehicles in seconds. AI air vehicle will leave the area after this time if not destroyed.
 	airReinforcementDuration0 = 120;
@@ -635,6 +642,25 @@ class CfgA3XAISettings {
 	//Maximum number of items to select from MiscLoot (generic loot) table. (Default: 2)											
 	miscLootCount = 2;
 	
+	/*	AI loot quantity settings (Vehicle)
+	
+	Note: A3XAI_vehiclesAllowedForPlayers = 1; must be set in order to enable the settings in this section
+	--------------------------------------------------------------------------------------------------------------------*/
+
+	//Maximum number of weapons from pistolList, rifleList, machinegunList, sniperList found in vehicles recovered by players. (Default: 5)								
+	weaponLootVehicleCount = 5;
+	
+	//Maximum number of magazines to generate for each weapon loot added to vehicle inventory (Default: 3)
+	ammoLootPerWeapon = 3;
+	
+	//Maximum number of food loot items from foodLoot found in vehicles recovered by players. (Default: 10)								
+	foodLootVehicleCount = 2;
+	
+	//Maximum number of items to select from miscLoot found in vehicles recovered by players. (Default: 10)											
+	miscLootVehicleCount = 10;
+	
+	//Maximum number of items to select from medicalLoot found in vehicles recovered by players. (Default: 5)											
+	medicalLootVehicleCount = 3;
 	
 	/*	AI loot probability settings. AI loot is pre-generated into a pool for each unit and randomly pulled to units as time passes.
 	--------------------------------------------------------------------------------------------------------------------*/
@@ -730,6 +756,11 @@ class CfgA3XAISettings {
 	//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	foodLoot[] = {"Exile_Item_GloriousKnakworst","Exile_Item_SausageGravy","Exile_Item_ChristmasTinner","Exile_Item_BBQSandwich","Exile_Item_Surstromming","Exile_Item_Catfood","Exile_Item_PlasticBottleFreshWater","Exile_Item_Beer","Exile_Item_Energydrink"};
 	miscLoot[] = {"Exile_Item_Rope","Exile_Item_DuctTape","Exile_Item_ExtensionCord","Exile_Item_FuelCanisterEmpty","Exile_Item_JunkMetal","Exile_Item_LightBulb","Exile_Item_MetalBoard","Exile_Item_MetalPole","Exile_Item_CamoTentKit"};
+	
+	//AI Medical item types. 
+    // Note: medicalLoot will not be read if generateMedicalFood is enabled.
+    //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    medicalLoot[] = {"Exile_Item_InstaDoc","Exile_Item_Bandage","Exile_Item_Vishpirin"};
 	
 	
 	//AI toolbelt item types. Toolbelt items are added to AI inventory upon death. Format: [item classname, item probability]

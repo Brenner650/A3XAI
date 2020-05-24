@@ -117,6 +117,7 @@ A3XAI_deleteGroup = compileFinal preprocessFileLineNumbers format ["%1\compile\A
 A3XAI_deleteCustomSpawn = compileFinal preprocessFileLineNumbers format ["%1\compile\A3XAI_utilities\A3XAI_deleteCustomSpawn.sqf",A3XAI_directory];
 A3XAI_findSpawnPos = compileFinal preprocessFileLineNumbers format ["%1\compile\A3XAI_utilities\A3XAI_findSpawnPos.sqf",A3XAI_directory];
 A3XAI_fixStuckGroup = compileFinal preprocessFileLineNumbers format ["%1\compile\A3XAI_utilities\A3XAI_fixStuckGroup.sqf",A3XAI_directory];
+A3XAI_generateVehicleLoot = compileFinal preprocessFileLineNumbers format ["%1\compile\A3XAI_utilities\A3XAI_generateVehicleLoot.sqf",A3XAI_directory];
 A3XAI_getNoAggroStatus = compileFinal preprocessFileLineNumbers format ["%1\compile\A3XAI_utilities\A3XAI_getNoAggroStatus.sqf",A3XAI_directory];
 A3XAI_getSafePosReflected = compileFinal preprocessFileLineNumbers format ["%1\compile\A3XAI_utilities\A3XAI_getSafePosReflected.sqf",A3XAI_directory];
 A3XAI_getSpawnParams = compileFinal preprocessFileLineNumbers format ["%1\compile\A3XAI_utilities\A3XAI_getSpawnParams.sqf",A3XAI_directory];

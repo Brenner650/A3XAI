@@ -301,8 +301,9 @@ if (A3XAI_pistolList isEqualTo []) then {A3XAI_pistolList = ["hgun_ACPC2_F","hgu
 if (A3XAI_rifleList isEqualTo []) then {A3XAI_rifleList = ["arifle_Katiba_C_F","arifle_Katiba_F","arifle_Katiba_GL_F","arifle_Mk20_F","arifle_Mk20_GL_F","arifle_Mk20_GL_plain_F","arifle_Mk20_plain_F","arifle_Mk20C_F","arifle_Mk20C_plain_F","arifle_MX_Black_F","arifle_MX_F","arifle_MX_GL_Black_F","arifle_MX_GL_F","arifle_MXC_Black_F","arifle_MXC_F","arifle_SDAR_F","arifle_TRG20_F","arifle_TRG21_F","arifle_TRG21_GL_F"]};
 if (A3XAI_machinegunList isEqualTo []) then {A3XAI_machinegunList = ["arifle_MX_SW_Black_F","arifle_MX_SW_F","LMG_Mk200_F","LMG_Zafir_F","MMG_01_hex_F","MMG_01_tan_F","MMG_02_black_F","MMG_02_camo_F","MMG_02_sand_F"]};
 if (A3XAI_sniperList isEqualTo []) then {A3XAI_sniperList = ["arifle_MXM_Black_F","arifle_MXM_F","srifle_DMR_01_F","srifle_DMR_02_camo_F","srifle_DMR_02_F","srifle_DMR_02_sniper_F","srifle_DMR_03_F","srifle_DMR_03_khaki_F","srifle_DMR_03_multicam_F","srifle_DMR_03_tan_F","srifle_DMR_03_woodland_F","srifle_DMR_04_F","srifle_DMR_04_Tan_F","srifle_DMR_05_blk_F","srifle_DMR_05_hex_F","srifle_DMR_05_tan_f","srifle_DMR_06_camo_F","srifle_DMR_06_olive_F","srifle_EBR_F","srifle_GM6_camo_F","srifle_GM6_F","srifle_LRR_camo_F","srifle_LRR_F"]};
-if (A3XAI_foodLoot isEqualTo []) then {A3XAI_foodLootCount = 0};
-if (A3XAI_MiscLoot isEqualTo []) then {A3XAI_miscLootCount = 0};
+if (A3XAI_foodLoot isEqualTo []) then {A3XAI_foodLootCount = 0; A3XAI_foodLootVehicleCount = 0;};
+if (A3XAI_miscLoot isEqualTo []) then {A3XAI_miscLootCount = 0; A3XAI_miscLootVehicleCount = 0;};
+if (A3XAI_medicalLoot isEqualTo []) then {A3XAI_medicalLootCount = 0; A3XAI_medicalLootVehicleCount = 0;};
 if (A3XAI_airReinforcementVehicles isEqualTo []) then {A3XAI_maxAirReinforcements = 0; A3XAI_airReinforcementSpawnChance1 = 0; A3XAI_airReinforcementSpawnChance2 = 0; A3XAI_airReinforcementSpawnChance3 = 0;};
 
 diag_log format ["[A3XAI] Verified %1 unique classnames in %2 seconds.",(count _verified),(diag_tickTime - _startTime)];
